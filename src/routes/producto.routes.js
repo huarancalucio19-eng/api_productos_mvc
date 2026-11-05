@@ -1,14 +1,12 @@
-const express = require('express');
-const router = express.Router();
+const { Router } = require('express');
+const controller = require('../controllers/producto.controller');
 
-// Forzamos la búsqueda al nombre exacto de tu archivo físico:
-const productoController = require('../controllers/producto.controller');
+const router = Router();
 
-router.get('/', productoController.listar);
-router.get('/:id', productoController.obtener);
-router.post('/', productoController.crear);
-router.put('/:id', productoController.actualizar);
-router.delete('/:id', productoController.eliminar);
+router.get('/', controller.listar);
+router.get('/:id', controller.obtener);
+router.post('/', controller.crear);
+router.put('/:id', controller.actualizar);
+router.delete('/:id', controller.eliminar);
 
 module.exports = router;
-

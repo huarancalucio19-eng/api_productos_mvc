@@ -1,23 +1,19 @@
 {
   "name": "api_productos_mvc",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API REST CRUD de productos con Node.js, Express, MySQL y patrón MVC",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
-
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^18.0.8",
-    "express": "^5.3.0",
-    "mysql2": "^3.24.6"
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.9"
   }
 }
