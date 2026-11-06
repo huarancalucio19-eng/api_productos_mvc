@@ -1,7 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const productoRoutes = require('./routes/producto.routes');
 
 const app = express();
+
+// Permite que React (otro puerto) pueda llamar a esta API
+app.use(cors());
 
 // Permite que Express entienda el JSON que envía el cliente
 app.use(express.json());
@@ -18,8 +22,5 @@ app.use('/api/productos', productoRoutes);
 app.use((req, res) => {
   res.status(404).json({ mensaje: 'Ruta no encontrada' });
 });
-
-app.use(cors());
-app.use(express.json());
 
 module.exports = app;
