@@ -19,4 +19,7 @@ app.use((req, res) => {
   res.status(404).json({ mensaje: 'Ruta no encontrada' });
 });
 
+app.use(cors());
+app.use(express.json());
+
 module.exports = app;

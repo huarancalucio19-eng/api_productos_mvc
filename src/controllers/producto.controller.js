@@ -47,7 +47,7 @@ const obtener = async (req, res) => {
 const crear = async (req, res) => {
   try {
     const datos = req.body ?? {};
-    const errorValidacion = validarProducto(datos, true);
+    const errorValidacion = validarProducto(datos, false);
     if (errorValidacion) {
       return res.status(400).json({ mensaje: errorValidacion });
     }
